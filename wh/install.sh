@@ -7,6 +7,9 @@ fi
 sudo apt-get update
 
 
+sudo apt-get install git
+sudo apt-get install dos2unix
+
 #wget -qO- https://get.docker.com/ | sh
 #sudo usermod -aG docker $(whoami)
 
@@ -29,6 +32,10 @@ sudo apt-get -y install postgresql-client
 # Install wordpress (and mysql and LAMP)
 
 ${SCRIPTS_PATH}/install-wp.sh
+
+# Install Sublime Text Editor and required libraries
+
+${SCRIPTS_PATH}/install-sublime.sh
 
 
 # install wordpress with docker compose (only works for 64 bit clients)
