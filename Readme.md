@@ -13,14 +13,16 @@ PURPOSE + JUSTIFICATION:
 INSTALLATION:
 =============
 
-1. download and install Vagrant https://www.vagrantup.com/downloads.html
-2. download and install Virtualbox https://www.virtualbox.org/wiki/Downloads
-3. make a local directory, and in that directory:
-4. git clone https://github.com/leungant/webdev-vagrantfile
-5. cd wh
-6. vagrant up
+1. Download and install Vagrant https://www.vagrantup.com/downloads.html
+2. Download and install Virtualbox https://www.virtualbox.org/wiki/Downloads
+3. Make a local directory, and in that directory:
+```
+git clone https://github.com/leungant/webdev-vagrantfile
+cd wh
+vagrant up
+```
 
-This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, vagrant up will be relatively snappy.
+This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, "vagrant up" will be relatively snappy.
 
 While you're waiting and on windows:
 
@@ -31,5 +33,5 @@ vagrant ssh
 to get login details to your locally hosted vagrant machine.
 
 Typically this is hostname: localhost, port: 2222, user: vagrant, password: vagrant
-Login, and voila, a webdev box ready to go.
+Login, et voila, a webdev box ready to go.
 
