@@ -1,3 +1,4 @@
+
 WORK-ANYWHERE WEB DEVELOPMENT VAGRANTFILE:
 ==========================================
 
@@ -12,6 +13,8 @@ PURPOSE + JUSTIFICATION:
 + Use the bash scripts to ensure similar setups on a linux machine.. though the theory is you're a whizz at installing packages on a linux machine if you run linux!
 
 + Docker layer may come soon.. Especially if Docker and Docker machine support 32 bit.. Will be Docker Swarm scripts.
+
++ /home/vagrant/files on the VM is mapped to the Windows Vagrantfile directory, you can access and transfer files there.
 
 INSTALLATION:
 =============
