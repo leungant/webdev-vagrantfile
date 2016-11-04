@@ -12,17 +12,19 @@ PURPOSE + JUSTIFICATION:
 
 INSTALLATION:
 =============
-1) download and install Vagrant https://www.vagrantup.com/downloads.html
-2) download and install Virtualbox https://www.virtualbox.org/wiki/Downloads
-3) make a local directory, and in that directory:
-4) git clone https://github.com/leungant/webdev-vagrantfile
-5) cd wh
-6) vagrant up
+
+1. download and install Vagrant https://www.vagrantup.com/downloads.html
+2. download and install Virtualbox https://www.virtualbox.org/wiki/Downloads
+3. make a local directory, and in that directory:
+4. git clone https://github.com/leungant/webdev-vagrantfile
+5. cd wh
+6. vagrant up
 
 This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, vagrant up will be relatively snappy.
 
 While you're waiting and on windows:
-7) Download and install putty (https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi) or mobaxterm (https://mobaxterm.mobatek.net/download-home-edition.html)
+
+7. Download and install putty (https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi) or mobaxterm (https://mobaxterm.mobatek.net/download-home-edition.html)
 
 After VM creation is complete, type 
 vagrant ssh 
