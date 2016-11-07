@@ -19,6 +19,7 @@ sudo pip install virtualenvwrapper
 source `which virtualenvwrapper.sh`
 echo "source `which virtualenvwrapper.sh`" >> ~/.bashrc # TODO check if required.
 
+sudo apt-get install libjpeg-dev # jpeg imaging. zlib seems to be there by default
 
 ${SCRIPTS_PATH}/install-node.sh
 sudo npm install -g grunt
