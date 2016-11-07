@@ -1,4 +1,3 @@
-+ 
 WORK-ANYWHERE WEB DEVELOPMENT VAGRANTFILE:
 ==========================================
 
