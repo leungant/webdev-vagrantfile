@@ -11,29 +11,29 @@ PURPOSE + JUSTIFICATION:
 
 + Use the bash scripts to ensure similar setups on a linux machine.. though the theory is you're a whizz at installing packages on a linux machine if you run linux!
 
-+ /home/vagrant/files on the VM is mapped to the Windows Vagrantfile directory, you can access and transfer files there, and use your windows development tools with the files on the virtual box.
++ /home/vagrant/files on the VM is mapped to the Host machine's Vagrantfile directory, you can access and transfer files there, and use your windows development tools with the files on the virtual box.
 
 + Docker layer may come soon.. Especially if Docker and Docker machine support 32 bit.. Will be Docker Swarm scripts.
 
-
++ The install\*.sh scripts work on any linux based system so you may find them useful for setting up your environments on Linux based environments.
 
 INSTALLATION:
 =============
 
 1. Download and install Vagrant https://www.vagrantup.com/downloads.html
 2. Download and install Virtualbox https://www.virtualbox.org/wiki/Downloads
-3. Make a local directory, and in that directory open an ADMINISTRATOR command prompt:
+3. Make a local directory, and in that directory:
 ```
 git clone https://github.com/leungant/webdev-vagrantfile
 cd wh
-vagrant up   (with admin privileges on windows!)
+vagrant up   (or windows-runbox.bat to run with admin privileges on windows for symlink support!)
 ```
 
 Administrator privileges on Windows are required for the vagrant up step to allow symbolic links to be made, this is very important if you are interacting with javascript and node/npm, or drupal etc, less so if you know you are not.
 
 This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, "vagrant up" will be relatively snappy.
 
-While you're waiting and on windows:
+While you're waiting and on Windows:
 
 7. Download and install putty (https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi) + an X Server (https://sourceforge.net/projects/vcxsrv/) if you wish to use graphical applications on the box (e.g. Sublime Text), or just mobaxterm on its own (https://mobaxterm.mobatek.net/download-home-edition.html) for both an SSH client and an X Server combined.
 
