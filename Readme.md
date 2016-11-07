@@ -29,7 +29,7 @@ git clone https://github.com/leungant/webdev-vagrantfile
 cd wh
 vagrant up   (with admin privileges!)
 ```
-Administrator privilege is required for the vagrant up step to allow symbolic links to be made, this is very important if you are interacting with javascript and node/npm.
+Administrator privilege is required for the vagrant up step to allow symbolic links to be made, this is very important if you are interacting with javascript and node/npm, or drupal etc, less so if you know you are not.
 
 This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, "vagrant up" will be relatively snappy.
 
@@ -42,5 +42,6 @@ vagrant ssh
 to get login details to your locally hosted vagrant machine.
 
 Typically this is hostname: localhost, port: 2222, user: vagrant, password: vagrant
+
 Login, et voila, a webdev box ready to go.
 
