@@ -26,9 +26,10 @@ INSTALLATION:
 ```
 git clone https://github.com/leungant/webdev-vagrantfile
 cd wh
-vagrant up   (with admin privileges!)
+vagrant up   (with admin privileges on windows!)
 ```
-Administrator privilege is required for the vagrant up step to allow symbolic links to be made, this is very important if you are interacting with javascript and node/npm, or drupal etc, less so if you know you are not.
+
+Administrator privileges on Windows are required for the vagrant up step to allow symbolic links to be made, this is very important if you are interacting with javascript and node/npm, or drupal etc, less so if you know you are not.
 
 This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, "vagrant up" will be relatively snappy.
 
