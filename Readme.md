@@ -12,21 +12,24 @@ PURPOSE + JUSTIFICATION:
 
 + Use the bash scripts to ensure similar setups on a linux machine.. though the theory is you're a whizz at installing packages on a linux machine if you run linux!
 
++ /home/vagrant/files on the VM is mapped to the Windows Vagrantfile directory, you can access and transfer files there, and use your windows development tools with the files on the virtual box.
+
 + Docker layer may come soon.. Especially if Docker and Docker machine support 32 bit.. Will be Docker Swarm scripts.
 
-+ /home/vagrant/files on the VM is mapped to the Windows Vagrantfile directory, you can access and transfer files there.
+
 
 INSTALLATION:
 =============
 
 1. Download and install Vagrant https://www.vagrantup.com/downloads.html
 2. Download and install Virtualbox https://www.virtualbox.org/wiki/Downloads
-3. Make a local directory, and in that directory:
+3. Make a local directory, and in that directory open an ADMINISTRATOR command prompt:
 ```
 git clone https://github.com/leungant/webdev-vagrantfile
 cd wh
-vagrant up
+vagrant up   (with admin privileges!)
 ```
+Administrator privilege is required for the vagrant up step to allow symbolic links to be made, this is very important if you are interacting with javascript and node/npm.
 
 This will download the initial 32-bit Ubuntu linux image, then set up the machine so it's ready for web dev. After this first time, "vagrant up" will be relatively snappy.
 
