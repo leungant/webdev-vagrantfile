@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /home/vagrant/files/
 git clone https://github.com/womenhackfornonprofits/ocdaction
-cd frontend
+cd ocdaction/frontend
 sudo gem install sass
 npm install  # --no-bin-links
 grunt default &
