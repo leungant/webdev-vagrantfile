@@ -5,7 +5,7 @@
 # Edit the following to change the name of the database user that will be created:
 #APP_DB_USER=myapp
 APP_DB_USER=postgres
-APP_DB_PASS=dbpass
+APP_DB_PASS=postgres
 
 # Edit the following to change the name of the database that is created (defaults to the user name)
 APP_DB_NAME=$APP_DB_USER
@@ -79,6 +79,9 @@ sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" "$PG_CONF"
 # Append to pg_hba.conf to add password auth:
 echo "host    all             all             all                     md5" >> "$PG_HBA"
 
+# Add vagrant to peer auth
+echo "local   all             all                                     peer" >> "$PG_HBA"
+
 # Explicitly set default client_encoding
 echo "client_encoding = utf8" >> "$PG_CONF"
 
@@ -95,6 +98,7 @@ CREATE DATABASE $APP_DB_NAME WITH OWNER=$APP_DB_USER
                                   LC_CTYPE='en_US.utf8'
                                   ENCODING='UTF8'
                                   TEMPLATE=template0;
+CREATE DATABASE vagrant;
 EOF
 
 # Tag the provision time:
@@ -103,3 +107,10 @@ date > "$PROVISIONED_ON"
 echo "Successfully created PostgreSQL dev virtual machine."
 echo ""
 print_db_usage
+
+# Manually set password
+sudo -u $APP_DB_USER psql -c "ALTER USER postgres PASSWORD '$APP_DB_PASS';"
+
+echo "Install pg client drivers"
+sudo apt-get -y install postgresql-client
+sudo apt-get -y install libpq-dev

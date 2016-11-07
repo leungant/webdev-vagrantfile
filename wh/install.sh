@@ -7,12 +7,12 @@ fi
 sudo apt-get update
 
 
-sudo apt-get install git
-sudo apt-get install dos2unix
+sudo apt-get install -y git
+sudo apt-get install -y dos2unix
 
 #wget -qO- https://get.docker.com/ | sh
 #sudo usermod -aG docker $(whoami)
-
+sudo apt-get install -y python-dev
 sudo apt-get -y install python-pip
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
@@ -21,21 +21,29 @@ echo "source `which virtualenvwrapper.sh`" >> ~/.bashrc # TODO check if required
 
 
 ${SCRIPTS_PATH}/install-node.sh
+sudo npm install -g grunt
 
 # Install Python version manager p
-npm install -g pyvm
+sudo npm install -g pyvm
 
 # install Postgres database
-${SCRIPTS_PATH}/install-pg.sh
+sudo ${SCRIPTS_PATH}/install-pg.sh
 sudo apt-get -y install postgresql-client
+sudo apt-get install -y libpq-dev
+if [[ $1 == "onvagrant" ]] 
+then sudo ${SCRIPTS_PATH}/install-pg-vagrant-user.sh
+fi
+
 
 # Install wordpress (and mysql and LAMP)
 
-${SCRIPTS_PATH}/install-wp.sh
+# ${SCRIPTS_PATH}/install-wp.sh
 
 # Install Sublime Text Editor and required libraries
+if [[ $1 == "onvagrant" ]] 
+then ${SCRIPTS_PATH}/install-sublime.sh
+fi
 
-${SCRIPTS_PATH}/install-sublime.sh
 
 
 # install wordpress with docker compose (only works for 64 bit clients)
