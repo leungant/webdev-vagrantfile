@@ -43,5 +43,5 @@ to get login details to your locally hosted vagrant machine.
 
 Typically this is hostname: localhost, port: 2222, user: vagrant, password: vagrant
 
-Login, et voila, a webdev box ready to go.
+Login, et voila, a webdev box ready to go. Access your web applications on 10.10.10.10
 
