@@ -5,7 +5,7 @@ PURPOSE + JUSTIFICATION:
 ========================
 + Create VM environment with common webdev tools already set up. 
 + Useful for hack or meetup crew setups where you can get started developing quickly.
-+ Designed to "just work" so any odd looking choices and combinations are most likely due to support for as wide a range of  OSes/architectures as possible. Many hours have gone into making this as error free as possible.
++ Designed to "just work" so any odd looking choices and combinations are most likely due to support for as wide a range of  OSes/architectures as possible. Many hours have gone into making this as smooth as possible.
 
 + Add your code fetching steps to the install.sh file.
 
