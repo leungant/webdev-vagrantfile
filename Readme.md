@@ -1,4 +1,4 @@
-
++ 
 WORK-ANYWHERE WEB DEVELOPMENT VAGRANTFILE:
 ==========================================
 
@@ -35,7 +35,7 @@ This will download the initial 32-bit Ubuntu linux image, then set up the machin
 
 While you're waiting and on windows:
 
-7. Download and install putty (https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi) or mobaxterm (https://mobaxterm.mobatek.net/download-home-edition.html)
+7. Download and install putty (https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi) + an X Server (https://sourceforge.net/projects/vcxsrv/) if you wish to use graphical applications on the box (e.g. Sublime Text), or just mobaxterm on its own (https://mobaxterm.mobatek.net/download-home-edition.html) for both an SSH client and an X Server combined.
 
 After VM creation is complete, type 
 vagrant ssh 
