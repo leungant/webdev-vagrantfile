@@ -42,7 +42,7 @@ fi
 
 # Install Sublime Text Editor and required libraries
 if [[ $1 == "onvagrant" ]] 
-then ${SCRIPTS_PATH}/install-sublime.sh
+then ${SCRIPTS_PATH}/install-sublime-32bit.sh
 fi
 
 
